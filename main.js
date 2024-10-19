@@ -37,7 +37,8 @@ addToPurchaseButton.addEventListener("click", () => {
 
 
      //adding a new product when submitted on the form
-     addProductForm.addEventListener("submit", (event) => {
+    const addProductForm = document.getElementById("add-product-form")
+    addProductForm.addEventListener("submit", (event) => {
         event.preventDefault();
         const name = document.getElementById("product-name").value;
         const price = document.getElementById("product-price").value;
