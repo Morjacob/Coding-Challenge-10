@@ -25,7 +25,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    sizeSelector.addEventListener("change", updateUI);
+    sizeSelector.addEventListener("change", updateInventory);
 
   
     updateInvtentory();
