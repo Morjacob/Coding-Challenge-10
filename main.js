@@ -40,10 +40,6 @@ addToPurchaseButton.addEventListener("click", () => {
     const addProductForm = document.getElementById("add-product-form")
     addProductForm.addEventListener("submit", (event) => {
         event.preventDefault();
-        const productItem = document.createElement;
-        productItem.setAttribute("product-name", name);
-        productItem.setAttribute("product-price", price);
-        productItem.setAttribute("product-stock", stock)
     }
 );
 
