@@ -15,13 +15,13 @@
 
     function updateInventory() {
        const pickedSize = sizeSelector.value;
-       const product = products[selectedSize];
+       const product = products[pickedSize];
        priceElement.textContent = `$${product.price}` 
        inventoryCount.textContent = product.stock > 0? `In stock: ${product.stock}` : "out of stock";
        addToPurchaseButton.disabled = product.stock <= 0;
 
     }
-    
+
 addToPurchaseButton.addEventListener("click", () => {
     stock--
     updateInventory();
