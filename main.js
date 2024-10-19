@@ -3,11 +3,11 @@ const sizeSelector =document.getElementById("size-selector");
 const inventoryCount = document.getElementById("inventory-count");
 const addToPurchaseButton = document.getElementById("purchase-product");
 
-let stock = Number(sizeSelector.options[sizeSelector.selectedIndex].getAtrribute("data-stock"));
+let stock = Number(sizeSelector.options[sizeSelector.selectedIndex].getAttribute("data-stock")); 
 sizeSelector.addEventListener("change" , (event) => {
     const selectedPrice = event.target.value;
-    priceElement.textContext = `$${selectedPrice}`
-    stock = Number(event.target.options[event.target.selectedIndex].getAttribute("data-stock")); // Use Number here
+    priceElement.textContent = `$${selectedPrice}`; 
+    stock = Number(event.target.options[event.target.selectedIndex].getAttribute("data-stock")); 
     updateInventory();
 })
 
