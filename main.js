@@ -18,7 +18,12 @@ let stock = 5
 addToPurchaseButton.addEventListener("click", () => {
     stock--
     updateInventory();
-})
+    if (stock > "0") { 
+        alert(`Purchase confirmed for ${sizeSelector.value}.`);
+    } else {
+        alert("This product is out of stock.");
+    }
+});
 
     updateInventory();
 
