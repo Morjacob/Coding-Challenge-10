@@ -40,19 +40,14 @@ addToPurchaseButton.addEventListener("click", () => {
     const addProductForm = document.getElementById("add-product-form")
     addProductForm.addEventListener("submit", (event) => {
         event.preventDefault();
-
-    function createProductElement(name, price, stock) {
         const productItem = document.createElement;
         productItem.setAttribute("product-name", name);
         productItem.setAttribute("product-price", price);
         productItem.setAttribute("product-stock", stock)
     }
-       
-        createProductElement(name, price, stock);
-        addProductForm.reset();
-    });
+);
 
 
-    createProductElement("Jeans", 50, 6);
+
 
 
