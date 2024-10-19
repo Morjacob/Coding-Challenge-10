@@ -19,7 +19,6 @@ addToPurchaseButton.addEventListener("click", () => {
     stock--
     updateInventory();
     if (stock > "0") { 
-        inventoryCount = (stock - 1);
         alert(`Purchase confirmed for ${sizeSelector.value}.`);
     } else {
         alert("This product is out of stock.");
@@ -35,3 +34,17 @@ addToPurchaseButton.addEventListener("click", () => {
         priceElement.textContent = `$${selectedPrice}`; 
         updateInventory();
     });
+
+
+     //adding a new product when submitted on the form
+     addProductForm.addEventListener("submit", (event) => {
+        event.preventDefault();
+        const name = document.getElementById("product-name").value;
+        const price = document.getElementById("product-price").value;
+        const stock = document.getElementById("product-stock").value;
+        createProductElement(name, price, stock);
+        addProductForm.reset();
+    });
+
+    //new product example
+    createProductElement("shirt", 20, 3);
