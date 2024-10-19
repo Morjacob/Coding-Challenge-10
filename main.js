@@ -5,7 +5,6 @@ let stock = 5
     const inventoryCount = document.getElementById("inventory-count");
     const addToPurchaseButton = document.getElementById("purchase-product");
 
-
     function updateInventory() {
         if (stock > 0 ) {
            addToPurchaseButton.disabled = false;
@@ -15,6 +14,7 @@ let stock = 5
             inventoryCount.textContent = "Out of Stock"
         }
     }
+//is stock if greater than 0, the popup will say "in stock"
 addToPurchaseButton.addEventListener("click", () => {
     stock--
     updateInventory();
@@ -27,8 +27,7 @@ addToPurchaseButton.addEventListener("click", () => {
 
     updateInventory();
 
-    
-
+//allows you to choose which size, the size will change when updated
     sizeSelector.addEventListener("change", (event) => {
         const selectedPrice = event.target.value;
         priceElement.textContent = `$${selectedPrice}`; 
