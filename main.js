@@ -11,7 +11,6 @@ document.addEventListener("DOMContentLoaded", function() {
         addToPurchaseButton.disabled = stock === 0; 
     }
     
-
     updateInventory();
 
     sizeSelector.addEventListener("change", (event) => {
