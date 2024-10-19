@@ -40,12 +40,19 @@ addToPurchaseButton.addEventListener("click", () => {
     const addProductForm = document.getElementById("add-product-form")
     addProductForm.addEventListener("submit", (event) => {
         event.preventDefault();
-        const name = document.getElementById("product-name").value;
-        const price = document.getElementById("product-price").value;
-        const stock = document.getElementById("product-stock").value;
+
+    function createProductElement(name, price, stock) {
+        const productItem = document.createElement;
+        productItem.setAttribute("product-name", name);
+        productItem.setAttribute("product-price", price);
+        productItem.setAttribute("product-stock", stock)
+    }
+       
         createProductElement(name, price, stock);
         addProductForm.reset();
     });
 
-    //new product example
-    createProductElement("shirt", 20, 3);
+
+    createProductElement("Jeans", 50, 6);
+
+
